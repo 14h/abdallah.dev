@@ -20,7 +20,7 @@ $(document).ready(function () {
     });
 
     $('#slider-2').slick({
-        dots: true,
+        dots: false,
         arrows: false,
         infinite: true,
         slidesToShow: 3,
