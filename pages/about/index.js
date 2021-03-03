@@ -4,17 +4,12 @@ import Head from 'next/head'
 import Header from "../../components/header";
 
 export default function About() {
-
     return (
         <>
             <Layout>
-                <Head>
-                </Head>
+                <Head/>
                 <Container>
                     <Header selected='about'/>
-                    <div className='mt-32'>
-                        ABOUT PAGE
-                    </div>
                 </Container>
             </Layout>
         </>

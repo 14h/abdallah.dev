@@ -1,5 +1,5 @@
 import '../styles/index.css';
-import { AnimateSharedLayout } from 'framer-motion';
+import {AnimateSharedLayout} from 'framer-motion';
 
 export default function MyApp({Component, pageProps}) {
     return (
