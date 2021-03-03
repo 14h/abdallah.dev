@@ -12,7 +12,7 @@ export default function Home() {
             <Layout>
                 <Head />
                 <Container className="overflow-y-scroll max-h-screen">
-                    <Header selected="projects"/>
+                    <Header selected="home"/>
                     <h1 className="text-6xl md:text-6xl lg:text-7xl md:leading-none mt-48 mb-12 text-center">
                         WORK
                     </h1>

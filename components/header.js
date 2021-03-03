@@ -30,13 +30,8 @@ export default function Header({selected}) {
                     layoutId='navigation'
                 >
                     <Link href='/projects'>
-                        <div className={`p-4 cursor-pointer border-b-2 border-solid ${selected === 'projects' ? 'border-gray-400' : 'border-transparent'} hover:border-gray-300`}>
-                            WORK
-                        </div>
-                    </Link>
-                    <Link href='/posts'>
-                        <div className={`p-4 cursor-pointer border-b-2 border-solid ${selected === 'posts' ? 'border-gray-400' : 'border-transparent'} hover:border-gray-300`}>
-                            POSTS
+                        <div className={`p-4 cursor-pointer border-b-2 border-solid ${selected === 'home' ? 'border-gray-400' : 'border-transparent'} hover:border-gray-300`}>
+                            HOME
                         </div>
                     </Link>
                     <Link href='/about'>
