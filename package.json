@@ -4,14 +4,11 @@
     "scripts": {
         "dev": "next",
         "build": "next build",
-        "start": "next start",
-        "setup": "node ./contentful/setup.js $CONTENTFUL_SPACE_ID $CONTENTFUL_MANAGEMENT_TOKEN"
+        "start": "next start"
     },
     "dependencies": {
         "@brainhubeu/react-carousel": "^1.19.26",
-        "@contentful/rich-text-react-renderer": "^14.1.2",
         "classnames": "2.2.6",
-        "contentful": "7.14.4",
         "date-fns": "2.10.0",
         "framer-motion": "^3.9.1",
         "next": "latest",
@@ -20,7 +17,6 @@
     },
     "devDependencies": {
         "@fullhuman/postcss-purgecss": "^2.1.0",
-        "contentful-import": "^7.7.12",
         "postcss-preset-env": "^6.7.0",
         "tailwindcss": "^1.2.0"
     },
