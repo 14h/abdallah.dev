@@ -43,6 +43,8 @@ export const Canvas = props => {
         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
         ctx.fillStyle = '#000000';
         // ctx.beginPath();
+        //(frameCount + 2 * Math.PI) % (2 * Math.PI),
+        //(frameCount + 4 * Math.PI) % (2 * Math.PI)
         ctx.arc(
             ctx.canvas.width / 2,
             ctx.canvas.height / 2,

@@ -25,7 +25,7 @@ export default function Index() {
                                     className='text-6xl lg:text-8xl text-center text-white'
                                     layoutId='abdallah-kawji'
                                     style={{
-                                        WebkitTextStroke: '2px #000'
+                                        WebkitTextStroke: '6px #000'
                                     }}
                                 >
                                     ABDALLAH KAWJI
@@ -35,7 +35,7 @@ export default function Index() {
                                 className='flex flex-row justify-center items-center'
                                 layoutId='navigation'
                                 style={{
-                                    WebkitTextStroke: '1px #000'
+                                    WebkitTextStroke: '3px #000'
                                 }}
                             >
                                 <Link href='/home'>

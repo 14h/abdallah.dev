@@ -3,7 +3,6 @@ import {motion} from "framer-motion";
 
 export default function Header({selected}) {
 
-
     return (
         <motion.div
             layoutId='bg-black'
@@ -30,12 +29,14 @@ export default function Header({selected}) {
                     layoutId='navigation'
                 >
                     <Link href='/projects'>
-                        <div className={`p-4 cursor-pointer border-b-2 border-solid ${selected === 'home' ? 'border-gray-400' : 'border-transparent'} hover:border-gray-300`}>
+                        <div
+                            className={`p-4 cursor-pointer border-b-2 border-solid ${selected === 'home' ? 'border-gray-400' : 'border-transparent'} hover:border-gray-300`}>
                             HOME
                         </div>
                     </Link>
                     <Link href='/about'>
-                        <div className={`p-4 cursor-pointer border-b-2 border-solid ${selected === 'about' ? 'border-gray-400' : 'border-transparent'} hover:border-gray-300`}>
+                        <div
+                            className={`p-4 cursor-pointer border-b-2 border-solid ${selected === 'about' ? 'border-gray-400' : 'border-transparent'} hover:border-gray-300`}>
                             ABOUT
                         </div>
                     </Link>
