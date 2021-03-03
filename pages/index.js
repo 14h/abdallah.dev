@@ -41,13 +41,7 @@ export default function Index() {
                                 <Link href='/home'>
                                     <div
                                         className='text-2xl lg:text-5xl text-white p-4 cursor-pointer border-b-2 border-solid border-transparent hover:border-gray-300'>
-                                        HOME
-                                    </div>
-                                </Link>
-                                <Link href='/about'>
-                                    <div
-                                        className='text-2xl lg:text-5xl text-white p-4 cursor-pointer border-b-2 border-solid border-transparent hover:border-gray-300'>
-                                        ABOUT
+                                        ENTER
                                     </div>
                                 </Link>
                             </motion.div>

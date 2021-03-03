@@ -28,16 +28,22 @@ export default function Header({selected}) {
                     className='flex flex-row justify-center items-center lg:mr-20 mb-4 lg:mb-0'
                     layoutId='navigation'
                 >
-                    <Link href='/projects'>
+                    <Link href='#work'>
                         <div
-                            className={`p-4 cursor-pointer border-b-2 border-solid ${selected === 'home' ? 'border-gray-400' : 'border-transparent'} hover:border-gray-300`}>
-                            HOME
+                            className='p-4 cursor-pointer border-b-2 border-solid border-transparent hover:border-gray-300'>
+                            WORK
                         </div>
                     </Link>
-                    <Link href='/about'>
+                    <Link href='#about'>
                         <div
-                            className={`p-4 cursor-pointer border-b-2 border-solid ${selected === 'about' ? 'border-gray-400' : 'border-transparent'} hover:border-gray-300`}>
+                            className='p-4 cursor-pointer border-b-2 border-solid border-transparent hover:border-gray-300'>
                             ABOUT
+                        </div>
+                    </Link>
+                    <Link href='#contact'>
+                        <div
+                            className='p-4 cursor-pointer border-b-2 border-solid border-transparent hover:border-gray-300'>
+                            CONTACT
                         </div>
                     </Link>
                 </motion.div>
