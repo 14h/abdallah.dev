@@ -1,5 +1,8 @@
 import React, {useRef, useEffect, useState} from 'react'
 
+// https://jsart.co/150/drawing-mandala-with-js-canvas/
+// https://gist.github.com/kodi/d927e20e2462805b35042de25fd52cff
+
 const useWindowSize = () => {
     // Initialize state with undefined width/height so server and client renders match
     // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
@@ -37,23 +40,54 @@ export const Canvas = props => {
 
     const canvasRef = useRef(null);
     const windowSize = useWindowSize();
-    console.log(windowSize);
 
     const draw = (ctx, frameCount) => {
-        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-        ctx.fillStyle = '#000000';
-        // ctx.beginPath();
-        //(frameCount + 2 * Math.PI) % (2 * Math.PI),
-        //(frameCount + 4 * Math.PI) % (2 * Math.PI)
-        ctx.arc(
-            ctx.canvas.width / 2,
-            ctx.canvas.height / 2,
-            1300 * Math.sin(frameCount * 0.01) ** 2,
-            0,
-            2 * Math.PI
-        );
-        // ctx.fill();
-        ctx.stroke();
+        const width = ctx.canvas.width;
+        const height = ctx.canvas.height;
+        const center = {
+            x: width / 2,
+            y: height / 2,
+        };
+        const radius = (width / 2) + 180;
+        const lineColorTransparent = '#000000'
+        const slices = 110 ;
+        let _angle = 360 / slices;
+        let _start = 0;
+
+        const getPointOnCircle = function (deg, center, radius) {
+            const rad = ((deg + frameCount) * Math.PI/180);
+
+            return {
+                x: center.x + radius * Math.cos(rad),
+                y: center.y + radius * Math.sin(rad),
+            };
+        }
+
+        const lineStroke = (start, end, width, color) => {
+            ctx.lineWidth = width;
+            ctx.beginPath();
+            ctx.strokeStyle = color;
+            ctx.moveTo(start.x, start.y);
+            ctx.lineTo(end.x, end.y);
+            // ctx.bezierCurveTo(end.x, end.y, (Math.random() * 100 * end.y), (Math.random() * 100 * end.x), (Math.random() * 100 * end.y), (Math.random() * 100 * end.x));
+            ctx.stroke();
+
+        }
+
+        ctx.strokeStyle = lineColorTransparent;
+        ctx.beginPath();
+
+        for(let i = 0; i < slices; i++ ) {
+            lineStroke(
+                center,
+                getPointOnCircle(_start, center, radius),
+                1,
+                lineColorTransparent,
+            );
+
+            _start += _angle;
+        }
+
     }
 
     useEffect(() => {

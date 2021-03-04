@@ -1,8 +1,10 @@
-import Container from "../components/container";
-import Layout from "../components/layout";
 import Head from "next/head";
 import Link from "next/link";
+
 import {motion} from "framer-motion";
+
+import Container from "../components/container";
+import Layout from "../components/layout";
 import {Canvas} from "../components/canvas";
 
 export default function Index() {
@@ -25,7 +27,7 @@ export default function Index() {
                                     className='text-6xl lg:text-8xl text-center text-white'
                                     layoutId='abdallah-kawji'
                                     style={{
-                                        WebkitTextStroke: '6px #000'
+                                        WebkitTextStroke: '4px #000'
                                     }}
                                 >
                                     ABDALLAH KAWJI
